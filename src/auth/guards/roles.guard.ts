@@ -36,11 +36,11 @@ export class RolesGuard implements CanActivate {
     let decodedUser;
     try {
       // Validate and decode the token
-      decodedUser = this.jwtService.verify(token);
+      decodedUser = this.jwtService.verify(token, { secret: 'MYSECRETKEY' });
     } catch (error) {
       throw new UnauthorizedException('Invalid token');
     }
-
+    console.log(decodedUser);
     // Check if the user is authenticated
     if (!decodedUser || !decodedUser.roles) {
       throw new UnauthorizedException('User not authenticated');

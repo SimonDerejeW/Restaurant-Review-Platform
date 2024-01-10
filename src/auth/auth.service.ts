@@ -16,7 +16,7 @@ export class AuthService {
   ) {}
 
   async signUp(signUpDto: SignUpDto): Promise<{ access_token: string }> {
-    const { username, email, password, role } = signUpDto;
+    const { username, email, password, roles } = signUpDto;
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -24,11 +24,15 @@ export class AuthService {
       username,
       email,
       password: hashedPassword,
-      role,
+      roles,
     });
     await user.save();
 
-    const payload = { sub: user._id, username: user.username };
+    const payload = {
+      sub: user._id,
+      username: user.username,
+      roles: user.roles,
+    };
     return {
       access_token: await this.jwtService.signAsync(payload),
     };
@@ -49,7 +53,11 @@ export class AuthService {
       throw new BadRequestException('Invalid credentials');
     }
 
-    const payload = { sub: user._id, username: user.username };
+    const payload = {
+      sub: user._id,
+      username: user.username,
+      roles: user.roles,
+    };
     return {
       access_token: await this.jwtService.signAsync(payload),
     };
