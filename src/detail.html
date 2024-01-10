@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
-    <header></header>
+    <header class="bg-orange-400 p-4 flex flex-col sm:flex-row items-center justify-between bsolute top-0 right-0 left-0  ">
+        <h1 class="text-white text-3xl mb-4 sm:mb-0 sm:mr-4">Restaurant Review</h1>
+        <div class="flex items-center justify-between">
+            <input class="p-2" type="text" placeholder="Search Restaurants...">
+            <span class="p-2 border border-white-50  cursor-pointer">🔍</span>
+            <img class="w-8 ml-10" src="profile.jpg">
+        </div>
+    </header>
     <main> 
         <div class="sm:flex sm:flex-row justify-center border-2 mx-5">
             <div class="p-3 flex">
@@ -100,7 +107,13 @@
 
 
     </main>
-    <footer>          
+    <footer class="bg-orange-400 p-2 flex flex-col sm:flex-row items-center justify-between absolute bottom--1 left-0 right-0">
+        <h1 class="text-white">Beta Burger</h1>
+        <div class="text-white">
+            <p>Contact Us</p>
+            <p>+251912345678</p>
+        </div>
+        <p class="text-white">Powered by Excalibur Technologies</p>
     </footer>
     <script src="./ts/detail.js"></script>
 </body>
