@@ -14,7 +14,7 @@ The restaurant rating system allows users to comment on restaurants. Moreover, i
 ## 2.Features
   ### User Authentication and Authorization
       User registration and login
-      Role based access control for common users, restaurant owners and administrators 
+      Role based access control for common users and restaurant owners
 ###   User Profile Management: 
       User profile creation 
       User profile update
@@ -23,9 +23,11 @@ The restaurant rating system allows users to comment on restaurants. Moreover, i
       Search functionality for finding specific restaurants 
       Commenting feature for sharing opinions  
       Comprehensive view all comments on restaurants
+      Update and Delete comments
+      Update and Delete restaurants
 ###   Restaurant Owners Features:
       Feature that enables restaurants to post their dining establishment`
-      A system that allows restaurants to reply to comments
+      
 
 ## 3.Technologies used
 ###  Frontend:  TypeScript, Tailwind
