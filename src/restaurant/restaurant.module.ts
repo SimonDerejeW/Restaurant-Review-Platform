@@ -3,6 +3,8 @@ import { RestaurantController } from './restaurant.controller';
 import { RestaurantService } from './restaurant.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Restaurant, RestaurantSchema } from 'src/schemas/restaurant.schema';
+import { JwtService } from '@nestjs/jwt';
+import { AuthGuard } from 'src/auth/guards/auth.guard';
 
 @Module({
   imports: [
@@ -11,6 +13,6 @@ import { Restaurant, RestaurantSchema } from 'src/schemas/restaurant.schema';
     ]),
   ],
   controllers: [RestaurantController],
-  providers: [RestaurantService],
+  providers: [RestaurantService, JwtService, AuthGuard],
 })
 export class RestaurantModule {}
