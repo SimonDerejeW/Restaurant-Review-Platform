@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body class="bg-slate-100 min-h-screen">
+    <!-- HEADER SECTION -->
+    <header
+      class="bg-orange-400 p-4 flex flex-col sm:flex-row items-center justify-between"
+    >
+      <h1 class="text-white text-3xl mb-4 sm:mb-0 sm:mr-4">
+        Restaurant Review
+      </h1>
+      <div class="flex items-center justify-between">
+        <input class="p-2" type="text" placeholder="Search Restaurants..." />
+        <span class="p-2 border border-white-50 cursor-pointer">🔍</span>
+        <img class="w-8 ml-10" src="../photo/profile.jpg" />
+      </div>
+    </header>
+
+    <!-- THE MAIN BODY -->
+    <main>
+      <!-- listings of cards -->
+
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 card-container p-10 flex-1 justify-items-center bg-slate-100"
+      >
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+        <div class="card w-full rounded-xl sm:mb-0 bg-white">
+          <div>
+            <img src="../photo/card-image.jpg" class="rounded-xl" />
+          </div>
+          <div class="bg-white-50 p-4">
+            <p class="font-bold text-xl">Romania Restaurant</p>
+          </div>
+        </div>
+      </section>
+      <div class="pagination flex justify-end mb-5">
+        <a href="#" class="py-2 px-4 m-5 hover:bg-slate-300 rounded-md"
+          >&laquo;</a
+        >
+        <a
+          href="#"
+          class="py-2 px-4 m-5 bg-orange-300 rounded-md"
+          class="active"
+          >1</a
+        >
+        <a href="#" class="py-2 px-4 m-5 hover:bg-slate-300 rounded-md">2</a>
+        <a href="#" class="py-2 px-4 m-5 hover:bg-slate-300 rounded-md">3</a>
+        <a href="#" class="py-2 px-4 m-5 hover:bg-slate-300 rounded-md"
+          >&raquo;</a
+        >
+      </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer
+      class="bg-orange-400 p-2 flex flex-col sm:flex-row items-center justify-between"
+    >
+      <h1 class="text-white">Beta Burger</h1>
+      <div class="text-white">
+        <p>Contact Us</p>
+        <p>+251912345678</p>
+      </div>
+      <p class="text-white">Powered by Excalibur Technologies</p>
+    </footer>
+  </body>
+</html>

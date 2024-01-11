@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <title>Login page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-    <link rel="stylesheet" href="./tailwind-css/tailwind.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <body>
-      <section class="flex items items-center flex-col md:flex-row h-screen">
-  <div class="h-screen bg-white lg:block xl:w-1/3 md:w-2/3 h-screen">
-    <img src="./photo/food.jpg" class="h-full w-full object-cover max-w-full"/>
+      <section class="grid grid-cols-2 justify-items-cente">
+  <div class=" bg-white lg:block w-full h-dvh">
+    <img src="../photo/food.jpg" class="h-full w-full object-cover max-w-full"/>
   </div>
   <div class="w-full md:max-w-md flex items-center flex-col mx-auto my-4  justify-center">
     <form class="flex flex-col items-center  justify- mx-auto my-4  w-2/3">
       
-        <img src="./photo/login icon .jpg" class="w-32"/>
+        <img src="../photo/login icon .jpg" class="w-32"/>
         <h2 class=" m-4 my-4 font-display font-bold text-3xl text-center">Customer Sign In</h2>
         <div class="relative mt-8">
           <i class="fa fa-user absolute text-primarycolor text-xl"></i>
@@ -45,7 +45,7 @@
     </form>
     <div class="mt-8 flex justify-center items-center">
       <p class="font-medium text-base">Don't have an account?</p>
-      <button class="text-primarycolor text-base font-medium ml-2">Log in</button>
+      <button class="text-orange-300 text-base font-medium ml-2">Log in</button>
     </div>
   </div>
 </section>

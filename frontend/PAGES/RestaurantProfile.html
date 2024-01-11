@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Profile</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body class="bg-gray-100">
+    <header
+      class="bg-orange-400 p-4 flex flex-col sm:flex-row items-center justify-between bsolute top-0 right-0 left-0"
+    >
+      <h1 class="text-white text-3xl mb-4 sm:mb-0 sm:mr-4">
+        Restaurant Review
+      </h1>
+      <div class="flex items-center justify-between">
+        <input class="p-2" type="text" placeholder="Search Restaurants..." />
+        <span class="p-2 border border-white-50 cursor-pointer">🔍</span>
+        <img class="w-8 ml-10" src="../photo/profile.jpg" />
+      </div>
+    </header>
+    <main class="p-4">
+      <div class="flex justify-end mr-4">
+        <p class="py-2 px-4 bg-blue-500 text-white w-fit rounded-lg">
+          Edit Profile
+        </p>
+      </div>
+      <div class="input__section flex flex-col lg:grid lg:grid-cols-[1fr_2fr]">
+        <div class="">
+          <div class="mb-5">
+            <p class="text-3xl font-semibold">Romina Restaurant</p>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <figure class="car__images--image__top">
+              <img
+                src="../photo/images-front.jpg"
+                alt="Front Image"
+                class="w-36 h-36 rounded-lg"
+              />
+            </figure>
+            <div class="flex gap-2">
+              <img
+                src="../photo/images-side.jpg"
+                alt="Side Image"
+                class="w-32 h-28 rounded-lg"
+              />
+              <img
+                src="../photo/images-back.jpg"
+                alt="Back Image"
+                class="w-32 h-28 rounded-lg"
+              />
+            </div>
+          </div>
+          <div class="flex justify-center mt-4">
+            <p class="py-2 px-4 bg-blue-500 text-white w-fit rounded-lg">
+              Upload Image
+            </p>
+          </div>
+        </div>
+        <div class="input__form">
+          <div>
+            <p class="text-2xl font-medium">General Information</p>
+          </div>
+          <div>
+            <label for="opening-time">Hours of Operation:</label>
+            <input type="time" id="opening-time" name="opening-time" />
+          </div>
+          <div>
+            <label for="location">Location:</label>
+            <input type="text" placeholder="King George VI St. , Addis Ababa" />
+          </div>
+          <div>
+            <label for="phone-number">Phone Number:</label>
+            <input
+              type="number"
+              name="phone-number"
+              id="phone-number"
+              placeholder="0989971672"
+            />
+          </div>
+          <div class="my-5">
+            <p class="text-2xl font-medium my-2">Bio</p>
+            <p class="max-w-[500px]">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
+              quia! Error aliquid, id, doloribus nemo hic numquam incidunt natus
+              optio voluptas nulla magnam velit quidem inventore sapiente ad
+              iste tempora.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div>
+          <p class="text-2xl font-medium mb-10">Reviews</p>
+        </div>
+        <div class="flex gap-3">
+          <img
+            src="../photo/user.jpg"
+            alt="User Image"
+            class="w-14 h-14 rounded-full"
+          />
+          <div>
+            <div class="flex gap-4">
+              <div>
+                <p class="font-medium">Charlotte Andrews</p>
+                <div class="flex gap-2 text-zinc-400 text-xs">
+                  <p>Review Date . Jan 1, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <p class="max-w-[700px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                temporibus aliquid, molestias saepe dolor fugit officia incidunt
+                assumenda voluptatum a officiis deserunt non cum quo perferendis
+                repudiandae optio sit numquam dolorem nihil in quisquam nobis
+                perspiciatis dignissimos! Pariatur, officia? Animi dolorem
+                impedit nesciunt voluptas dolores dicta debitis vitae quas
+                harum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer
+      class="bg-orange-400 p-2 flex flex-col sm:flex-row items-center justify-between absolute bottom--1 left-0 right-0"
+    >
+      <h1 class="text-white">Restaurant Review</h1>
+      <div class="text-white">
+        <p>Contact Us</p>
+        <p>+251912345678</p>
+      </div>
+      <p class="text-white">Powered by Excalibur Technologies</p>
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>
