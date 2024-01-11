@@ -17,7 +17,6 @@ The restaurant rating system allows users to comment on restaurants. Moreover, i
       Role based access control for common users and restaurant owners
 ###   User Profile Management: 
       User profile creation 
-      User profile update
 ###   Common Users Features:
       View list of restaurants for easy exploration
       Search functionality for finding specific restaurants 
