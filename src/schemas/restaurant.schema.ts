@@ -1,17 +1,11 @@
-/* eslint-disable prettier/prettier */
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
-import { PrimaryGeneratedColumn } from 'typeorm';
-
+import { HydratedDocument, Schema as samiSchema } from 'mongoose';
+import { Comment } from './comment.schema';
 
 export type RestaurantDocument = HydratedDocument<Restaurant>;
 
-
 @Schema()
 export class Restaurant {
-  @PrimaryGeneratedColumn()
-  id: number;
-
   @Prop()
   name: string;
 
@@ -29,9 +23,12 @@ export class Restaurant {
 
   @Prop()
   closingTime: string;
+
+  @Prop({ type: String, ref: 'User' })
+  ownerId: string;
+
+  @Prop({ type: [{ type: samiSchema.Types.ObjectId, ref: 'Comment' }] })
+  comments: Comment[];
 }
-
-
-
 
 export const RestaurantSchema = SchemaFactory.createForClass(Restaurant);
