@@ -21,7 +21,11 @@
       <div
         class="w-full md:max-w-md flex items-center flex-col mx-auto my-4 justify-center"
       >
-        <form class="flex flex-col items-center justify- mx-auto my-4 w-2/3">
+        <form
+          class="flex flex-col items-center justify- mx-auto my-4 w-2/3"
+          name="loginForm"
+          id="loginForm"
+        >
           <img src="../photo/login icon .jpg" class="w-32" />
           <h2 class="m-4 my-4 font-display font-bold text-3xl text-center">
             Customer Log In
@@ -54,11 +58,12 @@
               <label for="general-user">General User</label>
             </div>
           </div>
-          <a
-            href="#"
-            class="py-2 px-20 mt-4 bg-primarycolor rounded-full text-white font-bold uppercase transform hover:translate-y-1 transition-all"
-            >Log In</a
-          >
+          <input
+            type="submit"
+            name="submit"
+            value="Log In"
+            class="py-2 px-20 mt-4 bg-orange-400 rounded-full text-white font-bold cursor-pointer"
+          />
         </form>
         <div class="mt-8 flex justify-center items-center">
           <p class="font-medium text-base">Don't have an account?</p>
