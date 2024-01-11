@@ -6,4 +6,6 @@ export class CreateRestaurantDto {
   contact: string;
   openingTime: string;
   closingTime: string;
+  ownerId: string;
+  comments: string[];
 }
