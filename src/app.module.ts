@@ -6,12 +6,16 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { RolesGuard } from './auth/guards/roles.guard';
 import { JwtService } from '@nestjs/jwt';
+import { RestaurantModule } from './restaurant/restaurant.module';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
     AuthModule,
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/restaurant-review'),
     UsersModule,
+    RestaurantModule,
+    CommentModule,
   ],
   controllers: [AppController],
   providers: [
