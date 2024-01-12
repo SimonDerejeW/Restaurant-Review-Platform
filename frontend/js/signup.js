@@ -42,4 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Handle other errors, e.g., network issues
       });
   });
+  function redirectToLogin() {
+    window.location.href = 'http://127.0.0.1:5500/frontend/PAGES/login.html';
+  }
+  const LogInButton = document.getElementById('redirectToLogin');
+  LogInButton.addEventListener('click', redirectToLogin);
 });
