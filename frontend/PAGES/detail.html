@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Details</title>
     <link rel="stylesheet" href="../styles.css" />
+    <!-- <script src="../js/detail.js"></script> -->
   </head>
   <body>
     <header
@@ -56,24 +57,13 @@
         <div class="sm:flex">
           <!-- restaurant -->
           <div class="sm:w-2/3 mx-10 mt-5 border-b-4 pb-2">
-            <h2 class="text-2xl font-bold">Romina Restaurant</h2>
+            <h2 class="text-2xl font-bold" id="restaurant-name">
+              Romina Restaurant
+            </h2>
 
             <!-- <h6 class="text-red-500">closed</h6> -->
 
-            <p id="moreText" style="display: none">
-              Dolore mollitia beatae laudantium nihil doloremque asperiores vel,
-              architecto ut at harum temporibus? Id est modi vero minima
-              repellat aliquid ipsa quo.
-            </p>
-            <p id="lessText">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              pariatur similique dolore commodi officiis iste exercitationem
-              provident facere.
-              <span id="dots" class="text-orange-400">+</span>
-              <a id="readMore" class="text-orange-400" onclick="readMore()"
-                >Read More</a
-              >
-            </p>
+            <p id="description"></p>
           </div>
 
           <!-- general info -->
@@ -81,16 +71,18 @@
             <h1 class="border-b-4 text-2xl font-semibold pb-2">General Info</h1>
             <div class="pt-2">
               <h2 class="text-xl py-2">hours of operation</h2>
-              <p class="text-xs text-gray-500">Mon-Fri: 11:00 AM – 10:00 PM</p>
-              <p class="text-xs text-gray-500">Sat-Sun: 11:00 AM – 11:00 PM</p>
+              <p class="text-xs text-gray-500">
+                <span id="opening-time"></span> -
+                <span id="closing-time"></span>
+              </p>
             </div>
             <div>
               <h2 class="text-xl py-2">phone number</h2>
-              <p class="text-xs text-gray-500">(251) 923-777-7788</p>
+              <p class="text-xs text-gray-500" id="contact"></p>
             </div>
             <div>
               <h2 class="text-xl py-2">location</h2>
-              <p class="text-xs">1234 Main Street, Anytown, USA 12345</p>
+              <p class="text-xs" id="location"></p>
             </div>
           </div>
         </div>
