@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href =
               'http://127.0.0.1:5500/frontend/PAGES/home.html';
           } else {
+            sessionStorage.setItem('curOwner', data.owner);
             window.location.href =
-              'http://127.0.0.1:5500/frontend/PAGES/detail.html';
+              'http://127.0.0.1:5500/frontend/PAGES/RestaurantProfile.html';
           }
         }
       })

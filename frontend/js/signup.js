@@ -32,17 +32,26 @@ document.addEventListener('DOMContentLoaded', function () {
           // Handle error appropriately, e.g., show an error message to the user
         } else if (data.access_token) {
           console.log('Signup successful. Redirecting to login page...');
+          console.log(data.roles);
+          console.log(data);
           // Redirect to login page
           if (data.roles[0] === 'user') {
             window.location.href =
               'http://127.0.0.1:5500/frontend/PAGES/login.html';
           } else {
+            // const restaurantData = {
+            //   name: 'null',
+            //   description: 'null',
+            //   openingTime: 'null',
+            //   closingTime: 'null',
+            //   location: 'null',
+            //   contact: 'null',
+            // };
             fetch('http://localhost:3000/restaurant', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify(restaurantData),
             })
               .then((response) => response.json())
               .then((data) => {
@@ -58,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error during restaurant creation:', error);
                 // Handle other errors, e.g., network issues
               });
+
+            window.location.href =
+              'http://127.0.0.1:5500/frontend/PAGES/login.html';
           }
         }
       })

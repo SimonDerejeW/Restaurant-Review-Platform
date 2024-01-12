@@ -26,6 +26,7 @@
           class="flex flex-col items-center justify- mx-auto my-4 w-2/3"
           name="signUpForm"
           id="signUpForm"
+          onsubmit="return validateFormForSignUp()"
         >
           <img src="../photo/login icon .jpg" class="w-32" />
           <h2 class="m-4 my-4 font-display font-bold text-3xl text-center">
@@ -39,7 +40,9 @@
               class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
               id="fullname"
             />
+            <p id="nameValidationError" class="text-red-500 text-xs mt-1 hidden">Username is required.</p>
           </div>
+
           <div class="relative mt-8">
             <i class="fa fa-envelope absolute text-primarycolor text-xl"></i>
             <input
@@ -48,7 +51,9 @@
               class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
               id="email"
             />
+            <p id="emailValidationError" class="text-red-500 text-xs mt-1 hidden">Email Address is required.</p>
           </div>
+
           <div class="relative mt-8">
             <i class="fa fa-lock absolute text-primarycolor text-xl"></i>
             <input
@@ -57,7 +62,9 @@
               class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
               id="password"
             />
+            <p id="passwordValidationError" class="text-red-500 text-xs mt-1 hidden">Password is required.</p>
           </div>
+
           <div
             class="container mx-auto px-4 mt-4 flex justify-between items-center"
           >
@@ -79,7 +86,9 @@
               />
               <label for="general-user">General User</label>
             </div>
+
           </div>
+          <p id="radioValidationError" class="text-red-500 text-xs mt-1 hidden">Please select a user type.</p>
           <a
             href="#"
             class="py-2 px-20 mt-4 bg-primarycolor rounded-full text-white font-bold uppercase transform hover:translate-y-1 transition-all"
@@ -104,5 +113,7 @@
         </div>
       </div>
     </section>
+    <script src="../js/for_sign_up.js"></script>
+
   </body>
 </html>
