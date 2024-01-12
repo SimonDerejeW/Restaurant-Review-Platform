@@ -33,13 +33,13 @@ export class CommentService {
     const savedComment = await comment.save();
     const restaurant = await this.restaurantModel
       .findById(createCommentDto.restaurantId)
-      .exec(); // Get the restaurant
+      .exec(); 
     if (!restaurant) {
       throw new HttpException(`Restaurant not found`, HttpStatus.NOT_FOUND);
     }
 
-    restaurant.comments.push(savedComment); // Append the comment
-    await restaurant.save(); // Save the restaurant
+    restaurant.comments.push(savedComment);
+    await restaurant.save();
     return savedComment;
   }
 

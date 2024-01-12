@@ -17,7 +17,7 @@ export class RestaurantService {
 
   async getRestaurants(query: Query): Promise<Restaurant[]> {
 
-    const resPerPage = 5;
+    const resPerPage = 20;
     const currentPage = Number(query.page) || 1;
     const skip = resPerPage * (currentPage - 1);
 
