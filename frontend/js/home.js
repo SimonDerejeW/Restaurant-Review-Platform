@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   class restaurantGrid {
     restaurant;
     constructor(restaurant_id, title) {
+      console.log(restaurant_id);
       this.restaurant = `
         <div  class="card w-full rounded-xl sm:mb-0 bg-white">
         <button
@@ -47,5 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function saveRestaurantId(item) {
   sessionStorage.setItem('curRestaurant', `${JSON.stringify(item)}`);
+  console.log(item);
   window.location.href = 'http://127.0.0.1:5500/frontend/PAGES/detail.html';
 }
