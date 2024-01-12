@@ -23,7 +23,7 @@ export class AuthController {
     return this.authService.signUp(signUpDto);
   }
 
-  @Get('/login')
+  @Post('/login')
   @UsePipes(new ValidationPipe())
   login(@Body() loginDto: LoginDto) {
     return this.authService.login(loginDto);

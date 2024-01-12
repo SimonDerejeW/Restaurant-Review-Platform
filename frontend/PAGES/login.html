@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/login.js"></script>
   </head>
   <body>
     <section class="grid grid-cols-2 justify-items-center">
@@ -36,6 +37,7 @@
               type="text"
               placeholder="User Name"
               class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
+              id="username"
             />
           </div>
           <div class="relative mt-8">
@@ -44,20 +46,12 @@
               type="password"
               placeholder="Password"
               class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
+              id="password"
             />
           </div>
           <div
             class="container mx-auto px-4 mt-4 flex justify-between items-center"
-          >
-            <div>
-              <input type="radio" id="restaurant" name="user-type" />
-              <label for="restaurant">Restaurant</label>
-            </div>
-            <div>
-              <input type="radio" id="general-user" name="user-type" />
-              <label for="general-user">General User</label>
-            </div>
-          </div>
+          ></div>
           <input
             type="submit"
             name="submit"

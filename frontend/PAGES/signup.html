@@ -1,59 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>SignUp page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/signup.js"></script>
   </head>
+
   <body>
-    <body>
-      <section class="grid grid-cols-2 justify-items-cente">
-  <div class=" bg-white lg:block w-full h-dvh">
-    <img src="../photo/food.jpg" class="h-full w-full object-cover max-w-full"/>
-  </div>
-  <div class="w-full md:max-w-md flex items-center flex-col mx-auto my-4  justify-center">
-    <form class="flex flex-col items-center  justify- mx-auto my-4  w-2/3" name="signUpForm"
-    id="signUpForm">
-      
-        <img src="../photo/login icon .jpg" class="w-32"/>
-        <h2 class=" m-4 my-4 font-display font-bold text-3xl text-center">Customer Sign Up</h2>
-        <div class="relative mt-8">
-          <i class="fa fa-user absolute text-primarycolor text-xl"></i>
-          <input type="text" placeholder="Full Name" class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg" />
-        </div>
-        <div class="relative mt-8">
-          <i class="fa fa-envelope absolute text-primarycolor text-xl"></i>
-          <input type="text" placeholder="Email Address" class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg" />
-        </div>
-        <div class="relative mt-8">
-          <i class="fa fa-lock absolute text-primarycolor text-xl"></i>
-          <input type="password" placeholder="Password" class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg" />
-        </div>
-        <div class="container mx-auto px-4 mt-4 flex justify-between items-center">
-          <div>
-            <input type="radio" id="restaurant" name="user-type">
-            <label for="restaurant">Restaurant</label>
+    <section class="grid grid-cols-2 justify-items-cente">
+      <div class="bg-white lg:block w-full h-dvh">
+        <img
+          src="../photo/food.jpg"
+          class="h-full w-full object-cover max-w-full"
+        />
+      </div>
+      <div
+        class="w-full md:max-w-md flex items-center flex-col mx-auto my-4 justify-center"
+      >
+        <form
+          class="flex flex-col items-center justify- mx-auto my-4 w-2/3"
+          name="signUpForm"
+          id="signUpForm"
+        >
+          <img src="../photo/login icon .jpg" class="w-32" />
+          <h2 class="m-4 my-4 font-display font-bold text-3xl text-center">
+            Customer Sign Up
+          </h2>
+          <div class="relative mt-8">
+            <i class="fa fa-user absolute text-primarycolor text-xl"></i>
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
+              id="fullname"
+            />
           </div>
-          <div>
-            <input type="radio" id="general-user" name="user-type">
-            <label for="general-user">General User</label>
+          <div class="relative mt-8">
+            <i class="fa fa-envelope absolute text-primarycolor text-xl"></i>
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
+              id="email"
+            />
           </div>
+          <div class="relative mt-8">
+            <i class="fa fa-lock absolute text-primarycolor text-xl"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              class="pl-8 border-b-4 font-display focus:outline-none focus:border-primarycolor transition-all duration-500 capitalize text-lg"
+              id="password"
+            />
+          </div>
+          <div
+            class="container mx-auto px-4 mt-4 flex justify-between items-center"
+          >
+            <div>
+              <input
+                type="radio"
+                id="restaurant"
+                name="user-type"
+                value="owner"
+              />
+              <label for="restaurant">Restaurant</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="general-user"
+                name="user-type"
+                value="user"
+              />
+              <label for="general-user">General User</label>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="py-2 px-20 mt-4 bg-primarycolor rounded-full text-white font-bold uppercase transform hover:translate-y-1 transition-all"
+            >Sign In</a
+          >
+
+          <input
+            type="submit"
+            name="submit"
+            value="Sign Up"
+            class="py-2 px-20 bg-orange-400 rounded-full text-white font-bold cursor-pointer"
+          />
+        </form>
+        <div class="mt-8 flex justify-center items-center">
+          <p class="font-medium text-base">Don't have an account?</p>
+          <button class="text-orange-300 text-base font-medium ml-2">
+            Log in
+          </button>
         </div>
-        <a href="#" class="py-2 px-20 mt-4 bg-primarycolor rounded-full text-white font-bold uppercase transform hover:translate-y-1 transition-all">Sign In</a>
-     
-        <input
-        type="submit"
-        name="submit"
-        value="Sign Up"
-        class="py-2 px-20  bg-orange-400 rounded-full text-white font-bold cursor-pointer"
-      />
-    </form>
-    <div class="mt-8 flex justify-center items-center">
-      <p class="font-medium text-base">Don't have an account?</p>
-      <button class="text-orange-300 text-base font-medium ml-2">Log in</button>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
   </body>
 </html>
