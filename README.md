@@ -26,13 +26,39 @@ The restaurant rating system allows users to comment on restaurants. Moreover, i
       Update and Delete restaurants
 ###   Restaurant Owners Features:
       Feature that enables restaurants to post their dining establishment`
-      
-
 ## 3.Technologies used
 ###  Frontend:  TypeScript, Tailwind
 ###  Backend: Node.js, Nest.js
 ###  Database: MongoDB
 ###  Authentication: JWT Token
+## 4. Why MongoDB?
+When selecting a database for the Restaurant Review App, several factors were considered, and MongoDB emerged as the optimal choice for the following reasons:
+- Flexible Schema Design
+- Scalability
+- JSON-Like Documents
+- Rich Query Language
+- Community Support and Ecosystem
+- Document Validation and Indexing
+## 5. Prerequisites
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [MongoDB](https://www.mongodb.com/)
+##6. Getting Started
+To run the Restaurant Review App locally, follow the following steps:
+A. **Clone Repository**
+B. **Install Dependencies:**
+   -     cd restaurant-review-app
+   -     npm install
+C.  **Set up environment variables**
+D.  **Run the application:*
+   -      npm start
+E. **Access the app**
+- Open your browser and navigate to http://localhost:3000 to access the Restaurant Review App
+
+
+  
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
