@@ -31,14 +31,14 @@ The restaurant rating system allows users to comment on restaurants. Moreover, i
 ###  Backend: Node.js, Nest.js
 ###  Database: MongoDB
 ###  Authentication: JWT Token
+###  Fetch API is usedfor communication with the backend.
 ## 4. Why MongoDB?
 When selecting a database for the Restaurant Review App, several factors were considered, and MongoDB emerged as the optimal choice for the following reasons:
-- Flexible Schema Design
-- Scalability
-- JSON-Like Documents
-- Rich Query Language
-- Community Support and Ecosystem
-- Document Validation and Indexing
+- **Flexible Schema Design:** MongoDB's document-oriented model allows for a flexible and dynamic schema. 
+- **Scalability**
+- **JSON-Like Documents:** MongoDB stores data in BSON format, a binary representation of JSON-like documents. This aligns well with the application's use of TypeScript and simplifies the integration of data between the frontend and the database.
+- **Rich Query Language:** MongoDB provides a powerful and expressive query language, allowing for complex queries and efficient retrieval of data. This is crucial for implementing features like comprehensive views of comments and reviews.
+- **Document Validation and Indexing:**MongoDB's document validation capabilities allow for enforcing data integrity at the database level. Additionally, the ability to create indexes enhances query performance, contributing to faster response times.
 ## 5. Prerequisites
 Before you begin, ensure you have the following installed:
 - [Node.js](https://nodejs.org/)
@@ -51,10 +51,10 @@ B. **Install Dependencies:**
    -     cd restaurant-review-app
    -     npm install
 C.  **Set up environment variables**
-D.  **Run the application:*
+D.  **Run the application**
    -      npm start
 E. **Access the app**
-- Open your browser and navigate to http://localhost:3000 to access the Restaurant Review App
+- open your web browser and proceed by signing up to begin the process.
 
 
   
