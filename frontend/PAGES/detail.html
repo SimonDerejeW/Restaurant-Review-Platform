@@ -15,11 +15,6 @@
       <h1 class="text-white text-3xl mb-4 sm:mb-0 sm:mr-4">
         Restaurant Review
       </h1>
-      <div class="flex items-center justify-between">
-        <input class="p-2" type="text" placeholder="Search Restaurants..." />
-        <span class="p-2 border border-white-50 cursor-pointer">🔍</span>
-        <img class="w-8 ml-10" src="../photo/profile.jpg" />
-      </div>
     </header>
     <main>
       <div class="sm:flex sm:flex-row justify-center border-2 mx-5">
@@ -62,9 +57,7 @@
 
             <!-- <h6 class="text-red-500">closed</h6> -->
 
-            <p id="description" style="display: none">
-            
-            </p>
+            <p id="description" style="display: none"></p>
           </div>
 
           <!-- general info -->
@@ -93,10 +86,15 @@
           <div class="py-2 border-black border-b-2 flex justify-between mr-10">
             <h4 class="font-bold">Reviews</h4>
             <div
-              class="py-1 inline-block px-1 rounded-lg bg-orange-400 cursor-pointer" >
-              <input type="text" name="" id="newReview" placeholder="Write a review">
-              <input type="submit" value="Submit" onclick="submitReview()">
-              
+              class="py-1 inline-block px-1 rounded-lg bg-orange-400 cursor-pointer"
+            >
+              <input
+                type="text"
+                name=""
+                id="newReview"
+                placeholder="Write a review"
+              />
+              <input type="submit" value="Submit" onclick="submitReview()" />
             </div>
           </div>
 
@@ -119,8 +117,6 @@
             </div>
           </div> -->
         </div>
-
-
       </div>
     </main>
     <footer
