@@ -29,8 +29,10 @@ export class RestaurantService {
         $options: 'i',
       },
     } : {};
+
+    const ownerId = query.ownerId ? {ownerId: query.ownerId} : {};
     
-    const restaurants = await this.restaurantModel.find({ ...keyword }).populate("comments").limit(resPerPage).skip(skip).exec();
+    const restaurants = await this.restaurantModel.find({ ...keyword, ...ownerId }).populate("comments").limit(resPerPage).skip(skip).exec();
 
     return restaurants;
   }
