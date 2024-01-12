@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Profile</title>
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/profile2.js"></script>
+    <script src="../js/profile.js"></script>
   </head>
 
   <body class="bg-gray-100">
@@ -22,39 +24,57 @@
     </header>
     <main class="p-4">
       <div class="flex justify-end mr-4">
-        <p class="py-2 px-4 bg-blue-500 text-white w-fit rounded-lg">
+        <p
+          id="editButton"
+          class="py-2 px-4 bg-blue-500 text-white w-fit rounded-lg"
+        >
           Edit Profile
         </p>
+        <div id="editForm" style="display: none">
+          <input
+            type="text"
+            name="edited-name"
+            id="edited-name"
+            placeholder="Edit name..."
+          />
+          <input
+            type="text"
+            name="edited-location"
+            id="edited-location"
+            placeholder="Edit location..."
+          />
+          <input
+            type="text"
+            name="edited-contact"
+            id="edited-contact"
+            placeholder="Edit contact..."
+          />
+          <input
+            type="text"
+            name="edited-opening-time"
+            id="edited-opening-time"
+            placeholder="Edit opening-time..."
+          />
+          <input
+            type="text"
+            name="edited-closing-time"
+            id="edited-closing-time"
+            placeholder="Edit closing-time..."
+          />
+          <input
+            type="text"
+            name="edited-description"
+            id="edited-description"
+            placeholder="Edit description..."
+          />
+          <button id="submitEdit">Submit</button>
+        </div>
       </div>
       <div class="input__section flex flex-col lg:grid lg:grid-cols-[1fr_2fr]">
         <div class="">
           <div class="mb-5">
-            <p class="text-3xl font-semibold">Romina Restaurant</p>
-          </div>
-          <div class="flex flex-col items-center gap-3">
-            <figure class="car__images--image__top">
-              <img
-                src="../photo/images-front.jpg"
-                alt="Front Image"
-                class="w-36 h-36 rounded-lg"
-              />
-            </figure>
-            <div class="flex gap-2">
-              <img
-                src="../photo/images-side.jpg"
-                alt="Side Image"
-                class="w-32 h-28 rounded-lg"
-              />
-              <img
-                src="../photo/images-back.jpg"
-                alt="Back Image"
-                class="w-32 h-28 rounded-lg"
-              />
-            </div>
-          </div>
-          <div class="flex justify-center mt-4">
-            <p class="py-2 px-4 bg-blue-500 text-white w-fit rounded-lg">
-              Upload Image
+            <p class="text-3xl font-semibold" id="restaurant-name">
+              Romina Restaurant
             </p>
           </div>
         </div>
@@ -64,49 +84,34 @@
           </div>
           <div>
             <label for="opening-time">Hours of Operation:</label>
-            <input type="time" id="opening-time" name="opening-time" />
+            <span id="opening-time"></span> -
+            <span id="closing-time"></span>
           </div>
           <div>
             <label for="location">Location:</label>
-            <input type="text" placeholder="King George VI St. , Addis Ababa" />
+            <p id="location"></p>
           </div>
           <div>
-            <label for="phone-number">Phone Number:</label>
-            <input
-              type="number"
-              name="phone-number"
-              id="phone-number"
-              placeholder="0989971672"
-            />
+            <label for="contact">Phone Number:</label>
+            <p id="contact"></p>
           </div>
           <div class="my-5">
-            <p class="text-2xl font-medium my-2">Bio</p>
-            <p class="max-w-[500px]">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
-              quia! Error aliquid, id, doloribus nemo hic numquam incidunt natus
-              optio voluptas nulla magnam velit quidem inventore sapiente ad
-              iste tempora.
-            </p>
+            <p class="text-2xl font-medium my-2">Description</p>
+            <p class="max-w-[500px]" id="description"></p>
           </div>
         </div>
       </div>
-      <div class="comments">
+      <div class="reviews">
         <div>
           <p class="text-2xl font-medium mb-10">Reviews</p>
         </div>
         <div class="flex gap-3">
-          <img
-            src="../photo/user.jpg"
-            alt="User Image"
-            class="w-14 h-14 rounded-full"
-          />
-          <div>
+          <div id="commentsContainer"></div>
+          <!-- <div>
             <div class="flex gap-4">
               <div>
                 <p class="font-medium">Charlotte Andrews</p>
-                <div class="flex gap-2 text-zinc-400 text-xs">
-                  <p>Review Date . Jan 1, 2024</p>
-                </div>
+                <div class="flex gap-2 text-zinc-400 text-xs"></div>
               </div>
             </div>
             <div class="mt-5">
@@ -120,7 +125,7 @@
                 harum.
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </main>
