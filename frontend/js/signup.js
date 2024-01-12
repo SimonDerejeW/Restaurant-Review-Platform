@@ -33,8 +33,32 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (data.access_token) {
           console.log('Signup successful. Redirecting to login page...');
           // Redirect to login page
-          window.location.href =
-            'http://127.0.0.1:5500/frontend/PAGES/login.html';
+          if (data.roles[0] === 'user') {
+            window.location.href =
+              'http://127.0.0.1:5500/frontend/PAGES/login.html';
+          } else {
+            fetch('http://localhost:3000/restaurant', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(restaurantData),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.error) {
+                  console.error('Restaurant creation failed:', data.error);
+                  // Handle error appropriately, e.g., show an error message to the user
+                } else {
+                  console.log('Restaurant created successfully:', data);
+                  // You can redirect or perform other actions upon successful creation
+                }
+              })
+              .catch((error) => {
+                console.error('Error during restaurant creation:', error);
+                // Handle other errors, e.g., network issues
+              });
+          }
         }
       })
       .catch((error) => {
