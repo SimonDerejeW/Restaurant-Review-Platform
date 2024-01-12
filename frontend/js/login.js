@@ -29,8 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
           // Save access token to sessionStorage or localStorage for future use
           sessionStorage.setItem('access_token', data.access_token);
           // You can also redirect the user to another page if needed
-          window.location.href =
-            'http://127.0.0.1:5500/frontend/PAGES/home.html';
+          if (data.roles[0] === 'user') {
+            console.log(data.roles);
+            window.location.href =
+              'http://127.0.0.1:5500/frontend/PAGES/home.html';
+          } else {
+            window.location.href =
+              'http://127.0.0.1:5500/frontend/PAGES/detail.html';
+          }
         }
       })
       .catch((error) => {
@@ -38,4 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Handle other errors, e.g., network issues
       });
   });
+  function redirectToSignUp() {
+    window.location.href = 'http://127.0.0.1:5500/frontend/PAGES/signup.html';
+  }
+  const signInButton = document.getElementById('redirectToSignUp');
+  signInButton.addEventListener('click', redirectToSignUp);
 });
