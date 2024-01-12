@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Details</title>
     <link rel="stylesheet" href="../styles.css" />
+    <!-- <script src="../js/detail2.js"></script> -->
   </head>
   <body>
     <header
@@ -56,23 +57,12 @@
         <div class="sm:flex">
           <!-- restaurant -->
           <div class="sm:w-2/3 mx-10 mt-5 border-b-4 pb-2">
-            <h2 class="text-2xl font-bold">Romina Restaurant</h2>
+            <h2 id="" class="text-2xl font-bold"></h2>
 
             <!-- <h6 class="text-red-500">closed</h6> -->
 
             <p id="moreText" style="display: none">
-              Dolore mollitia beatae laudantium nihil doloremque asperiores vel,
-              architecto ut at harum temporibus? Id est modi vero minima
-              repellat aliquid ipsa quo.
-            </p>
-            <p id="lessText">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              pariatur similique dolore commodi officiis iste exercitationem
-              provident facere.
-              <span id="dots" class="text-orange-400">+</span>
-              <a id="readMore" class="text-orange-400" onclick="readMore()"
-                >Read More</a
-              >
+            
             </p>
           </div>
 
@@ -81,22 +71,21 @@
             <h1 class="border-b-4 text-2xl font-semibold pb-2">General Info</h1>
             <div class="pt-2">
               <h2 class="text-xl py-2">hours of operation</h2>
-              <p class="text-xs text-gray-500">Mon-Fri: 11:00 AM – 10:00 PM</p>
-              <p class="text-xs text-gray-500">Sat-Sun: 11:00 AM – 11:00 PM</p>
+              <p class="text-xs text-gray-500">Mon-Fri: <span id="opiningtime"></span> – <span id="closingtime"></span></p>
             </div>
             <div>
               <h2 class="text-xl py-2">phone number</h2>
-              <p class="text-xs text-gray-500">(251) 923-777-7788</p>
+              <p id="contact" class="text-xs text-gray-500"></p>
             </div>
             <div>
               <h2 class="text-xl py-2">location</h2>
-              <p class="text-xs">1234 Main Street, Anytown, USA 12345</p>
+              <p id="location" class="text-xs"></p>
             </div>
           </div>
         </div>
 
         <!-- reviews -->
-        <div class="m-10">
+        <div id="reviews" class="m-10">
           <div class="py-2 border-black border-b-2 flex justify-between mr-10">
             <h4 class="font-bold">Reviews</h4>
             <div
@@ -106,7 +95,8 @@
             </div>
           </div>
 
-          <div>
+          <div id="commentsContainer"></div>
+          <!-- <div class="card">
             <div class="flex items-start space-x-2 mt-3">
               <img
                 class="w-10 h-10 rounded-full"
@@ -122,8 +112,10 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
+
+
       </div>
     </main>
     <footer
