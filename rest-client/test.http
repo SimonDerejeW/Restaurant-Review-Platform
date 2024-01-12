@@ -98,8 +98,8 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTlmMWMzOGIyNTlkNTE2MmYxNzZjNmQiLCJ1c2VybmFtZSI6IlNpbW9uRGVyZWplIiwicm9sZXMiOlsidXNlciJdLCJpYXQiOjE3MDUwNDUyNzksImV4cCI6MTcwNTEzMTY3OX0.w54dXu-F1M2_3vrewiQQq7He0J4XlU8ZmpwUbcuIuy4
 
 {
-    "restaurantId": "65a0ead5251dac75f2e2ea70",
-    "opinion": "This restaurant helped me get through my day"
+    "restaurantId": "65a0ea10251dac75f2e2ea69",
+    "opinion": "lorem ipsum"
 }
 
 

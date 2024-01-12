@@ -48,6 +48,7 @@ export class CommentController {
     @Req() request: Request,
   ): Promise<Comment> {
     createCommentDto.userId = request.user['sub'];
+    createCommentDto.username = request.user['username'];
     return this.commentService.createComment(createCommentDto);
   }
 

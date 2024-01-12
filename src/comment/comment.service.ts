@@ -4,11 +4,14 @@ import { UpdateCommentDto } from './dto/update-comment.dto';
 import { Comment, CommentDocument } from 'src/schemas/comment.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { Restaurant, RestaurantDocument } from 'src/schemas/restaurant.schema';
 
 @Injectable()
 export class CommentService {
   constructor(
     @InjectModel(Comment.name) private commentModel: Model<CommentDocument>,
+    @InjectModel(Restaurant.name)
+    private restaurantModel: Model<RestaurantDocument>,
   ) {}
 
   async getComments(): Promise<Comment[]> {
@@ -26,7 +29,18 @@ export class CommentService {
 
   async createComment(createCommentDto: CreateCommentDto): Promise<Comment> {
     const comment = new this.commentModel(createCommentDto);
-    return comment.save();
+
+    const savedComment = await comment.save();
+    const restaurant = await this.restaurantModel
+      .findById(createCommentDto.restaurantId)
+      .exec(); // Get the restaurant
+    if (!restaurant) {
+      throw new HttpException(`Restaurant not found`, HttpStatus.NOT_FOUND);
+    }
+
+    restaurant.comments.push(savedComment); // Append the comment
+    await restaurant.save(); // Save the restaurant
+    return savedComment;
   }
 
   async updateComment(

@@ -12,6 +12,9 @@ export class Comment {
   @Prop({ type: String, ref: 'User' })
   userId: string;
 
+  @Prop({ type: String, ref: 'User' })
+  username: string;
+
   @Prop({ type: samiSchema.Types.ObjectId, ref: 'Restaurant' })
   restaurantId: samiSchema.Types.ObjectId;
 }
