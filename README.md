@@ -54,7 +54,7 @@ C.  **Set up environment variables**
 D.  **Run the application**
    -      npm start
 E. **Access the app**
-- open your web browser and proceed by signing up to begin the process.
+- open your web browser and proceed by signing up html page to begin the process.
 
 
   
